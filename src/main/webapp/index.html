@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Skill Gap Analysis</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<header>
+  <div class="logo">⚡</div>
+  <div>
+    <h1>AI Skill Gap Analysis</h1>
+    <p>Compare your skills against your dream job</p>
+  </div>
+</header>
+
+<main>
+
+  <!-- INPUT FORM -->
+  <div class="card" id="input-section">
+    <h2>📋 Enter Your Details</h2>
+
+    <div class="form-group">
+      <label>Your Name</label>
+      <input type="text" id="userName" placeholder="e.g. Jhansi Chandra Reddy"/>
+    </div>
+
+    <div class="form-group">
+      <label>Your Current Skills</label>
+      <input type="text" id="skills"
+        placeholder="e.g. Python, MySQL, HTML, CSS, JavaScript"/>
+      <small>Separate skills with commas</small>
+    </div>
+
+    <div class="form-group">
+      <label>Target Job Role</label>
+      <select id="roleId">
+        <option value="1">Data Analyst</option>
+        <option value="2">Full Stack Developer</option>
+        <option value="3">ML Engineer</option>
+        <option value="4">DevOps Engineer</option>
+        <option value="5">Backend Developer</option>
+      </select>
+    </div>
+
+    <button onclick="analyzeSkills()">⚡ Analyze My Skills</button>
+  </div>
+
+  <!-- LOADER -->
+  <div id="loader" class="hidden">
+    <div class="spinner"></div>
+    <p>Analyzing your skills...</p>
+  </div>
+
+  <!-- RESULTS -->
+  <div id="results" class="hidden">
+
+    <div class="score-card">
+      <h2 id="result-title"></h2>
+      <div class="score-circle">
+        <span id="score-number">0%</span>
+      </div>
+      <p id="score-label"></p>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-box matched">
+        <h3>✅ Matched Skills</h3>
+        <ul id="matched-list"></ul>
+      </div>
+      <div class="skill-box missing">
+        <h3>❌ Missing Skills</h3>
+        <ul id="missing-list"></ul>
+      </div>
+    </div>
+
+    <div class="roadmap">
+      <h3>📌 Your Learning Roadmap</h3>
+      <div id="roadmap-list"></div>
+    </div>
+
+    <button onclick="resetForm()">🔄 Analyze Again</button>
+  </div>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

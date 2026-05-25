@@ -1,0 +1,178 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #0f172a;
+  color: #e2e8f0;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 40px;
+  background: #1e293b;
+  border-bottom: 1px solid #334155;
+}
+
+.logo {
+  width: 44px; height: 44px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+}
+
+header h1 { font-size: 22px; font-weight: 800; }
+header p { font-size: 13px; color: #94a3b8; }
+
+main { max-width: 900px; margin: 40px auto; padding: 0 24px; }
+
+.card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 24px;
+}
+
+.card h2 { font-size: 20px; margin-bottom: 24px; color: #a78bfa; }
+
+.form-group { margin-bottom: 20px; }
+.form-group label {
+  display: block;
+  font-size: 14px; font-weight: 600;
+  color: #94a3b8; margin-bottom: 8px;
+}
+
+input, select {
+  width: 100%;
+  background: #0f172a;
+  border: 1px solid #334155;
+  color: #e2e8f0;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+input:focus, select:focus { border-color: #6366f1; }
+small { color: #64748b; font-size: 12px; margin-top: 4px; display: block; }
+
+button {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff; border: none;
+  border-radius: 10px;
+  padding: 14px 32px;
+  font-size: 15px; font-weight: 700;
+  cursor: pointer; width: 100%;
+  transition: opacity 0.2s;
+  margin-top: 8px;
+}
+
+button:hover { opacity: 0.85; }
+
+#loader {
+  text-align: center;
+  padding: 40px;
+  color: #94a3b8;
+}
+
+.spinner {
+  width: 40px; height: 40px;
+  border: 3px solid #334155;
+  border-top-color: #6366f1;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto 16px;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.score-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 32px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.score-card h2 { font-size: 20px; color: #a78bfa; margin-bottom: 20px; }
+
+.score-circle {
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 16px;
+  box-shadow: 0 0 30px #6366f144;
+}
+
+#score-number { font-size: 28px; font-weight: 900; color: #fff; }
+#score-label { color: #94a3b8; font-size: 14px; }
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.skill-box {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #334155;
+}
+
+.skill-box h3 { font-size: 15px; margin-bottom: 14px; }
+.skill-box ul { list-style: none; }
+.skill-box ul li {
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.matched ul li { background: #052e16; color: #4ade80; }
+.missing ul li { background: #2d1010; color: #f87171; }
+
+.roadmap {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.roadmap h3 { font-size: 16px; color: #a78bfa; margin-bottom: 16px; }
+
+.roadmap-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px;
+  background: #0f172a;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  border-left: 3px solid #6366f1;
+}
+
+.step-num {
+  width: 28px; height: 28px;
+  background: #6366f1;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700; flex-shrink: 0;
+}
+
+.roadmap-item .skill-name { font-weight: 600; font-size: 14px; }
+.roadmap-item .skill-time { color: #64748b; font-size: 12px; margin-top: 2px; }
+
+.hidden { display: none !important; }
+
+@media (max-width: 600px) {
+  .skills-grid { grid-template-columns: 1fr; }
+  header { padding: 16px; }
+}
